@@ -16,7 +16,7 @@
       {
         "displayName": "Example Usage",
         "description": "Examples of ways to use the included extensions",
-        "path": "Samples/Usage"
+        "path": "Examples/Usage"
       }
     ],
     "hideInEditor": false

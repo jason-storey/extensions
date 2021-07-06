@@ -1,0 +1,16 @@
+{
+    "name": "com.jasonstorey.extensions.examples",
+    "rootNamespace": "",
+    "references": [
+        "com.jasonstorey.extensions"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
