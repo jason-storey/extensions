@@ -1,13 +1,10 @@
-﻿using JasonStorey.JasonStorey;
-
-namespace JasonStorey
-{
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using Object = UnityEngine.Object;
+
 namespace JasonStorey
 {
     public static class ValidationExtensions
@@ -49,29 +46,26 @@ namespace JasonStorey
                     BindingFlags.Static)
                 .Where(x=>x.GetCustomAttributes().Any(y=>y is RequiredAttribute));
     }
-    
 
-}
-
-/// <summary>
-/// Marks this field as Required
-/// </summary>
-[AttributeUsage(AttributeTargets.Field)]
-public class RequiredAttribute : Attribute { }
+        /// <summary>
+    /// Marks this field as Required
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Field)]
+    public class RequiredAttribute : Attribute { }
 
 
-#if UNITY_EDITOR
-/// <summary>
-/// Automatically runs on play in editor to check if any fields are missing
-/// </summary>
-public class CheckMissingFields 
-{
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-    static void TryValidate()
+    #if UNITY_EDITOR
+    /// <summary>
+    /// Automatically runs on play in editor to check if any fields are missing
+    /// </summary>
+    public class CheckMissingFields 
     {
-        var behaviours = Object.FindObjectsOfType<MonoBehaviour>();
-        foreach (var behaviour in behaviours) behaviour.Validate();
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void TryValidate()
+        {
+            var behaviours = Object.FindObjectsOfType<MonoBehaviour>();
+            foreach (var behaviour in behaviours) behaviour.Validate();
+        }
     }
-}
-#endif
-}
+    #endif
+    }
