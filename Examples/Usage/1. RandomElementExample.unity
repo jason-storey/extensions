@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac1c454a60dcb94eb803820ddeab1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToGenerate: 100
+  amountToGenerate: 20
   names:
   - Jason
   - Mary

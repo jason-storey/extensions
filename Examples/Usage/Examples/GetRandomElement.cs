@@ -14,8 +14,11 @@ namespace JasonStorey.examples
 
         string RandomNpc => $"{names.GetRandom()} the {jobs.GetRandom()}";
 
-        void Start()
+        void Start() => PrintResults();
+
+        void PrintResults()
         {
+            print($"From a collection of {names.Length} Names and {jobs.Count} Jobs, we will generate {amountToGenerate} Characters:");
             foreach (var character in RandomCharacters())
                 print(character);
         }
