@@ -1,23 +1,22 @@
 {
-    "name": "com.jasonstorey.extensions",
-    "version": "0.0.1-preview.1",
-    "displayName": "Jason's Extensions",
-    "description": "Unity extension methods and helpers",
-    "unity": "2019.1",
-    "unityRelease": "0b5",
-    "documentationUrl": "https://github.com/jason-storey/extensions#readme",
-    "changelogUrl": "CHANGELOG.md",
-    "author": {
-      "name": "Jason Storey",
-      "email": "jasonstoreyireland@gmail.com",
-      "url": "https://github.com/jason-storey"
-    },
-    "samples": [
-      {
-        "displayName": "Example Usage",
-        "description": "Examples of ways to use the included extensions",
-        "path": "Examples/Usage"
-      }
-    ],
-    "hideInEditor": false
-  }
+  "name": "com.jasonstorey.extensions",
+  "version": "0.0.1-preview.1",
+  "displayName": "Jason's Extensions",
+  "description": "Unity extension methods and helpers",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "https://github.com/jason-storey/extensions#readme",
+  "changelogUrl": "CHANGELOG.md",
+  "author": {
+    "name": "Jason Storey",
+    "email": "jasonstoreyireland@gmail.com",
+    "url": "https://github.com/jason-storey"
+  },
+  "samples": [
+    {
+      "displayName": "Example Usage",
+      "description": "Examples of ways to use the included extensions",
+      "path": "Examples/Usage"
+    }
+  ]
+}
