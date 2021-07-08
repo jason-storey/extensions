@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace JasonStorey
 {
@@ -59,6 +60,31 @@ namespace JasonStorey
             builder.Append(list[list.Count - 1]);
             return builder.ToString();
         }
+
+        public static T GetElementAtClamped<T>(this IList<T> list, int index)
+        {           
+            if (list == null || list.Count == 0) return default;
+            return list[Mathf.Clamp(index, 0, list.Count - 1)];
+        }
+
+        public static T GetElementAtWrapped<T>(this IList<T> list, int index)
+        {
+            if (list == null || list.Count == 0) return default;
+            return list[Mathf.Abs(index) % list.Count];
+        }
+
+        public static T GetElementAtPercent<T>(this IList<T> list, float percent,bool reverse = false)
+        {
+            if (list == null || list.Count == 0) return default;
+            if (reverse) percent = 1 - percent;
+            var num = Mathf.Lerp(0, list.Count - 1, percent);
+            return list[(int) num];
+        }
         
+        public static T GetElementFromMap<T>(this IList<T> list, float value,float max)
+        {
+            if (list == null || list.Count == 0) return default;
+            return list[(int) value.Map(0, max, 0, list.Count)];
+        }
     }
 }
